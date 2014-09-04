@@ -5,8 +5,14 @@
 //assuming byte addressable
 
 main(){
-  unsigned int **tagArray;
+  unsigned int **tagArray; //
   int **lruArray;
+  int i;
+  int j;
+  
+  tagArray = (int**) malloc(i*sizeof(int *)); //allocates memory that can hold i*sizeof(int*) bytes for tagArray
+  lruArray = (int**) malloc(i*sizeof(int *)); //allocates memory that can hold i*sizeof(int*) bytes for lruArray
+  
   FILE *ifp; //declare pointer to file
   ifp = fopen("trace.txt","r"); //*ifp points to trace.txt, open for read
   while (fscanf(ifp,"%d %x",&t) != EOF){ //assuming decimal, reads decimal and hex
