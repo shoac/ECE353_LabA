@@ -24,7 +24,7 @@ int offsetLength(int sizeOfLine){
   
 }
 
-int tagBits(){
+int tagBits(int Address, int offsetLength, int setIndexLength){
   //# of tagBits = Address length - offsetLength - setIndexLength
   //address is unsigned int
   //shift right offsetLength + setIndexLength to isolate tag bits
