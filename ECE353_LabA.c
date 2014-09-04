@@ -28,7 +28,6 @@ int whichSet(int fullAddress){    //Outputs the cache set in which the address f
   return a;                       //return set index
   
 }
-\fuckyou
 
 int setIndexLength(int numberOfLines, int sizeOfLine, int cacheSize){
   // Outputs the number of bits in the set index field.
@@ -53,9 +52,14 @@ int tagBits(int fullAddress){
   return a;
 }
 
-int hitWay(){
+
+int hitWay(int fullAddress,int numberOfLines){
   //if hit, return cache way
   //if miss, return -1
+  //if hit
+  for(int j = 0;j<numberOfLines;j++)
+    if(tagArray[whichSet(fullAddress)][i]) == tagBits(fullAddress)) return j;
+    else return -1;
 }
 
 void updateOnHit(){
