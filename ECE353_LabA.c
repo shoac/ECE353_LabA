@@ -40,11 +40,11 @@ int hitWay(){
 }
 
 void updateOnHit(){
-  //validLineAge++ in lruArray
+  //all validLineAge++ in lruArray
   //replaces accessed line in tagArray with new tag(?) if oldTag!=newTag
 }
 
 void updateOnMiss(){
-  //validLineAge++ in lruArray
+  //all validLineAge++ in lruArray
   //replace LRU line(greatest valid line age in lruArray) in tagArray with new tag
 }
