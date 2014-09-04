@@ -5,7 +5,8 @@
 //assuming byte addressable
 
 main(){
-  
+  unsigned int **tagArray;
+  int **lruArray;
 }
 
 int whichSet(){
@@ -32,13 +33,15 @@ int tagBits(int Address, int offsetLength, int setIndexLength){
 }
 
 int hitWay(){
-  
+  //if hit, return cache way
+  //if miss, return -1
 }
 
 void updateOnHit(){
+  //validLineAge++ in lruArray
   
 }
 
 void updateOnMiss(){
-  
+  //validLineAge++ in lruArray
 }
