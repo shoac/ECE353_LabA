@@ -21,7 +21,7 @@ int offsetLength(){
 }
 
 int tagBits(){
-  
+  //tagBits = Address length - offsetLength - setIndexLength
 }
 
 int hitWay(){
