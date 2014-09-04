@@ -28,6 +28,7 @@ int whichSet(int fullAddress){    //Outputs the cache set in which the address f
   return a;                       //return set index
   
 }
+\fuckyou
 
 int setIndexLength(int numberOfLines, int sizeOfLine, int cacheSize){
   // Outputs the number of bits in the set index field.
