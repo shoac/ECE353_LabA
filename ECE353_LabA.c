@@ -23,8 +23,8 @@ main(){
 int whichSet(int fullAddress){    //Outputs the cache set in which the address falls.
   unsigned int a = fullAddress;   //change full address into unsigned integer
   int numTagBit = 32 - setIndexLength(L,K,C) - offsetLength(L); //calculate the number of tag bit
-  a>>offsetLength(L);             //get rid of offset bits
-  a<<numTagBit;                   //get rid of tag bits
+  a<<numTagBit;                   //get rid of tag bits, left with index|offset|0's
+  a>>(numTagBit+offsetLength(L)); //get rid of offset bits and trailing 0's, leaves index
   return a;                       //return set index
   
 }
