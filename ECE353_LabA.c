@@ -12,8 +12,11 @@ int whichSet(){
 
 }
 
-int setIndexLength(){
+int setIndexLength(int numberOfLines, int sizeOfLine, int cacheSize){
+  //set size = K*L [number of lines * size of each line]
+  //# of sets = C/(K*L) [total cache size/set size = number of sets]
   //log2(# of sets)
+  return cacheSize/(numberOfLines*sizeOfLine);
 }
 
 int offsetLength(){
