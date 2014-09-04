@@ -13,7 +13,7 @@ int whichSet(){
 }
 
 int setIndexLength(){
-  
+  //log2(# of sets)
 }
 
 int offsetLength(){
