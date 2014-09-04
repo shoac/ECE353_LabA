@@ -7,16 +7,12 @@
 main(){
   unsigned int **tagArray;
   int **lruArray;
-  
-  FILE *ifp; //declare pointer to file
-  ifp = fopen("trace.txt","r"); //*ifp points to trace.txt, open for read
-  while (fscanf(ifp,"%d %x",&t) != EOF){ //assuming decimal, reads decimal and hex
-    //reads each access in the file(t), perform required actions here
-  }
 }
 
-int whichSet(){
-
+int whichSet(int setIndexLength){
+  //>> by offsetLength to reach setIndexbits
+  //identify set with setIndexbits
+  //return set
 }
 
 int setIndexLength(int numberOfLines, int sizeOfLine, int cacheSize){
@@ -45,7 +41,7 @@ int hitWay(){
 
 void updateOnHit(){
   //validLineAge++ in lruArray
-  //replaces accessed line in tagArray with new tag(?)
+  //replaces accessed line in tagArray with new tag(?) if oldTag!=newTag
 }
 
 void updateOnMiss(){
