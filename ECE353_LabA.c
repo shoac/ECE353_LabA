@@ -5,7 +5,13 @@
 //assuming byte addressable
 
 main(){
-  
+  unsigned int **tagArray;
+  int **lruArray;
+  FILE *ifp; //declare pointer to file
+  ifp = fopen("trace.txt","r"); //*ifp points to trace.txt, open for read
+  while (fscanf(ifp,"%d %x",&t) != EOF){ //assuming decimal, reads decimal and hex
+    //reads each access in the file(t), perform required actions here
+  }
 }
 
 int whichSet(int fullAddress){    //Outputs the cache set in which the address falls.
