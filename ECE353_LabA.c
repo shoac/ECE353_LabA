@@ -44,4 +44,5 @@ void updateOnHit(){
 
 void updateOnMiss(){
   //validLineAge++ in lruArray
+  //replace LRU line(greatest valid line age in lruArray) in tagArray with new tag
 }
