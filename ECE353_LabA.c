@@ -57,9 +57,11 @@ int hitWay(int fullAddress,int numberOfLines){
   //if hit, return cache way
   //if miss, return -1
   //if hit
-  for(int j = 0;j<numberOfLines;j++)
-    if(tagArray[whichSet(fullAddress)][i]) == tagBits(fullAddress)) return j;
+  for(int j = 0;j<numberOfLines;j++){
+     if((tagArray[whichSet(fullAddress)][j] == tagBits(fullAddress)) && (lruArray[whichSet(fullAddress)][j] > -1))
+       return j;            //if tag = tag && lru != -1 then return cache way(j)
     else return -1;
+  }
 }
 
 void updateOnHit(){
