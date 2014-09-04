@@ -7,11 +7,11 @@
 main(){
   unsigned int **tagArray; //
   int **lruArray;
-  int i;
-  int j;
+  int rows;
+  int columns;
   
-  tagArray = (int**) malloc(i*sizeof(int *)); //allocates memory that can hold i*sizeof(int*) bytes for tagArray
-  lruArray = (int**) malloc(i*sizeof(int *)); //allocates memory that can hold i*sizeof(int*) bytes for lruArray
+  tagArray = (int**) malloc(rows*sizeof(int *)); //allocates memory that can hold i*sizeof(int*) bytes for tagArray
+  lruArray = (int**) malloc(rows*sizeof(int *)); //allocates memory that can hold i*sizeof(int*) bytes for lruArray
   
   FILE *ifp; //declare pointer to file
   ifp = fopen("trace.txt","r"); //*ifp points to trace.txt, open for read
@@ -65,11 +65,25 @@ int hitWay(int fullAddress,int numberOfLines){
 }
 
 void updateOnHit(){
-  //all validLineAge++ in lruArray
-  //replaces accessed line in tagArray with new tag(?) if oldTag!=newTag
+  int i;
+  int j;
+  for(i=0; i<rows; i++){
+    for(j=0; j<columns; j++){
+      if lruArray[i][j]!=-1;  //if element in lruArray is valid
+        lruArray[i][j]++; //increase valid line age by 1
+    }
+  }
 }
 
 void updateOnMiss(){
-  //all validLineAge++ in lruArray
+  int i;
+  int j;
+  for(i=0; i<rows; i++){
+    for(j=0; j<columns; j++){
+      if lruArray[i][j]!=-1;  //if element in lruArray is valid
+        lruArray[i][j]++; //increase valid line age by 1
+    }
+  }
+      //all validLineAge++ in lruArray
   //replace LRU line(greatest valid line age in lruArray) in tagArray with new tag
 }
