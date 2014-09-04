@@ -47,13 +47,16 @@ int tagBits(int fullAddress){
 }
 
 int hitWay(){
-  
+  //if hit, return cache way
+  //if miss, return -1
 }
 
 void updateOnHit(){
-  
+  //all validLineAge++ in lruArray
+  //replaces accessed line in tagArray with new tag(?) if oldTag!=newTag
 }
 
 void updateOnMiss(){
-  
+  //all validLineAge++ in lruArray
+  //replace LRU line(greatest valid line age in lruArray) in tagArray with new tag
 }
