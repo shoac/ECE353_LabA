@@ -19,13 +19,14 @@ int setIndexLength(int numberOfLines, int sizeOfLine, int cacheSize){
   return cacheSize/(numberOfLines*sizeOfLine);
 }
 
-int offsetLength(){
+int offsetLength(int sizeOfLine){
   //log2(L), log2 of the block size is the number of bits required for the offset
   
 }
 
 int tagBits(){
   //tagBits = Address length - offsetLength - setIndexLength
+  return 32 - setIndexLength(L,K,C) - offsetLength(L);
 }
 
 int hitWay(){
