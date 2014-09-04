@@ -39,7 +39,7 @@ int hitWay(){
 
 void updateOnHit(){
   //validLineAge++ in lruArray
-  
+  //replaces accessed line in tagArray with new tag(?)
 }
 
 void updateOnMiss(){
